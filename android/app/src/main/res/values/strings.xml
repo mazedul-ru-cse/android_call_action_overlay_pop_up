@@ -1,0 +1,35 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="send_a_quick_message">Send a quick message.</string>
+    <string name="remind_me_to_make_another_call_with_017xxxx_in">Remind me to make another call with 017xxxx in:</string>
+    <string name="crate_a_follow_up">Crate a follow up</string>
+    <string name="next_follow_up_date">Next follow up date*</string>
+
+    <string-array name="callStatus">
+        <item>Call Status*</item>
+        <item>Missed Call</item>
+        <item>Received Call</item>
+        <item>Switch off</item>
+        <item>Busy</item>
+        <item>Waiting</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="assignTo">
+        <item>Assign To*</item>
+        <item>Mazedul Islam</item>
+        <item>Shamim</item>
+        <item>Asad</item>
+        <item>Amir Hamza</item>
+    </string-array>
+
+    <string-array name="followUpCategory">
+        <item>Select follow category*</item>
+        <item>Call</item>
+        <item>Physical visit</item>
+        <item>In-house Activity</item>
+        <item>Other</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/background_color"
+    android:orientation="vertical">
+
+
+    <View
+        android:layout_gravity="center_horizontal"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="0dp"
+        android:padding="0dp"
+        android:background="@drawable/baseline_drag_handle_24" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/closeDialogBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:padding="2dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/baseline_cancel_24" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/hint_white"
+            android:layout_marginTop="0dp"
+            android:layout_height="1dp"/>
+
+        <ImageView
+            android:background="@drawable/circle"
+            android:src="@drawable/outline_person_24"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/clientName"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/outline_edit_24"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:text="Suggest a name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/clientPhoneNumber"
+            android:textSize="14sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:text="+8801770554970"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/hint_white"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="1dp"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_marginTop="2dp"
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/hint_white"
+            android:layout_height="1dp"/>
+
+        <GridLayout
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:columnCount="5"
+            android:rowCount="1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/navFollowUpBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                app:cardBackgroundColor="@color/background_color"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <View
+                        android:visibility="visible"
+                        android:id="@+id/followUpIndicator"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/purple"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_how_to_reg_24" />
+
+                    <TextView
+                        android:textColor="@color/white"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:text="Follow Up" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:clickable="true"
+                android:id="@+id/navNoteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                app:cardBackgroundColor="@color/background_color"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <View
+                        android:visibility="invisible"
+                        android:id="@+id/noteIndicator"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/purple"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_notes_24" />
+
+                    <TextView
+                        android:textColor="@color/white"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:text="Note" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/navReminderBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                app:cardBackgroundColor="@color/background_color"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <View
+                        android:visibility="invisible"
+                        android:id="@+id/reminderIndicator"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/purple"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_alarm_24" />
+
+                    <TextView
+                        android:textColor="@color/white"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:text="Reminder" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/navTaskBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                app:cardBackgroundColor="@color/background_color"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <View
+                        android:visibility="invisible"
+                        android:id="@+id/taskIndicator"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/purple"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_task_alt_24" />
+
+                    <TextView
+                        android:textColor="@color/white"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:text="Task" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/navSmsBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="4"
+                app:cardBackgroundColor="@color/background_color"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <View
+                        android:visibility="invisible"
+                        android:layout_marginRight="5dp"
+                        android:id="@+id/smsIndicator"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/purple"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_message_24" />
+
+                    <TextView
+                        android:textColor="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="SMS" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </GridLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_gravity="top"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:text="@string/remind_me_to_make_another_call_with_017xxxx_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <HorizontalScrollView
+        android:layout_gravity="bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:scrollbarTrackHorizontal="@color/white">
+
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/reminderTenMint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:text=" 10 min "
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                tools:ignore="UsingOnClickInXml" />
+
+            <TextView
+                android:id="@+id/reminderOneHrs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/round"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:text=" 1 Hrs "
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                tools:ignore="UsingOnClickInXml" />
+
+            <TextView
+                android:id="@+id/reminderThreeHrs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/round"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:text=" 3 Hrs "
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                tools:ignore="UsingOnClickInXml" />
+
+            <TextView
+                android:id="@+id/reminderTomorrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/round"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:text=" Tomorrow "
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                tools:ignore="UsingOnClickInXml" />
+
+            <TextView
+                android:id="@+id/reminderCustom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/round"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:text=" Custom "
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                tools:ignore="UsingOnClickInXml" />
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+
+
+</LinearLayout>

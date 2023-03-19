@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_gravity="top"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:text="@string/crate_a_follow_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"/>
+
+
+        <EditText
+            android:id="@+id/nextFollowUpdate"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/next_follow_up_date"
+            android:textColorHint="@color/hint_white"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:drawableRight="@drawable/baseline_calendar_month_24"
+            android:background="@drawable/edit_field_border"/>
+
+        <EditText
+            android:id="@+id/followUpNote"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Write a note"
+            android:textColorHint="@color/hint_white"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="@drawable/edit_field_border"/>
+
+        <Spinner
+            android:background="@drawable/edit_field_border"
+            android:layout_marginTop="10dp"
+            android:id="@+id/callStatusSpinner"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:background="@drawable/edit_field_border"
+            android:layout_marginTop="10dp"
+            android:id="@+id/assignToSpinner"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/edit_field_border"
+            android:layout_marginTop="10dp"
+            android:id="@+id/followCategorySpinner"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>
