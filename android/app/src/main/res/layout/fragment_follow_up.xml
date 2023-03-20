@@ -65,13 +65,24 @@
             android:layout_height="wrap_content"/>
 
         <Spinner
-            android:layout_marginBottom="20dp"
             android:background="@drawable/edit_field_border"
             android:layout_marginTop="10dp"
             android:id="@+id/followCategorySpinner"
             android:textSize="16sp"
             android:padding="10dp"
             android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/followUpSendBtn"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:text="Send"
+            android:textColor="@color/white"
+            android:background="@drawable/edit_field_border"
             android:layout_height="wrap_content"/>
 
     </LinearLayout>

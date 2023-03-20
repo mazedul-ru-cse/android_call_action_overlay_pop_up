@@ -36,6 +36,7 @@ class MyService : BroadcastReceiver(){
         activityIntent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
         activityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
 
+        //Start overlay pop up service
         context.startService(activityIntent)
 
     }
