@@ -10,10 +10,10 @@ public class DBHandler extends SQLiteOpenHelper {
 
     // creating a constant variables for our database.
     // below variable is for our database name.
-    private static final String DB_NAME ="iCRMDB";
+    private static final String DB_NAME ="iCRM.db";
 
     // below int is our database version
-    private static final int DB_VERSION = 1;
+    private static final int DB_VERSION = 2;
 
     // below variable is for our table name.
     private static final String TABLE_NAME = "follo_up";
