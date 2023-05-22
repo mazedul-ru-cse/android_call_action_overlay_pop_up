@@ -6,9 +6,6 @@ import android.content.IntentFilter
 import android.os.Bundle
 import android.widget.Toast
 import android.util.Log
-import androidx.annotation.NonNull
-import io.flutter.embedding.engine.FlutterEngine
-import io.flutter.plugin.common.MethodChannel
 
 class MainActivity: FlutterActivity() {
 
@@ -19,6 +16,7 @@ class MainActivity: FlutterActivity() {
 
         Toast.makeText(this, "Work", Toast.LENGTH_SHORT).show()
         Log.i("Action", "Work")
+
 
         configureReceiver()
     }

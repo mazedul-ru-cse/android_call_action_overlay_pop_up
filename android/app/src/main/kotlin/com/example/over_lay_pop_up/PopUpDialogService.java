@@ -1,11 +1,9 @@
 package com.example.over_lay_pop_up;
-import android.app.AlertDialog;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.Service;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PixelFormat;
@@ -18,19 +16,14 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.core.app.NotificationCompat;
-import androidx.fragment.app.FragmentManager;
-import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import java.util.ArrayList;
+import com.example.over_lay_pop_up.page_fragment_.CustomPagerAdapter;
 
 public class PopUpDialogService extends Service {
     View viewRoot;
@@ -49,14 +42,25 @@ public class PopUpDialogService extends Service {
     //slide indicators
     View followUpIndicator, noteIndicator,reminderIndicator,taskIndicator,smsIndicator;
 
+    TextView contactNumber,contactName;
+    String phone,name;
+
     public PopUpDialogService() {
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         if (intent == null) {
+
             return START_NOT_STICKY;
         }
+
+        phone = intent.getStringExtra("contactNumber");
+        name = intent.getStringExtra("contactName");
+
+        contactNumber.setText(phone);
+        contactName.setText(name);
+
         return super.onStartCommand(intent, flags, startId);
     }
 
@@ -118,18 +122,27 @@ public class PopUpDialogService extends Service {
                 //Initialize the id
                 closeBtn = viewRoot.findViewById(R.id.closeDialogBtn);
                 viewPager = viewRoot.findViewById(R.id.viewPager);
-                followUpBtn = viewRoot.findViewById(R.id.navFollowUpBtn);
+                followUpBtn = viewRoot.findViewById(R.id.callStatus);
                 noteBtn = viewRoot.findViewById(R.id.navNoteBtn);
                 reminderBtn = viewRoot.findViewById(R.id.navReminderBtn);
-                taskBtn = viewRoot.findViewById(R.id.navTaskBtn);
-                smsBtn = viewRoot.findViewById(R.id.navSmsBtn);
+                //taskBtn = viewRoot.findViewById(R.id.navTaskBtn);
+                //smsBtn = viewRoot.findViewById(R.id.navSmsBtn);
 
                 //initialize slide indicator
                 followUpIndicator = viewRoot.findViewById(R.id.followUpIndicator);
                 noteIndicator = viewRoot.findViewById(R.id.noteIndicator);
                 reminderIndicator = viewRoot.findViewById(R.id.reminderIndicator);
-                taskIndicator = viewRoot.findViewById(R.id.taskIndicator);
-                smsIndicator = viewRoot.findViewById(R.id.smsIndicator);
+                //taskIndicator = viewRoot.findViewById(R.id.taskIndicator);
+                //smsIndicator = viewRoot.findViewById(R.id.smsIndicator);
+
+                //Initialize contactNumber and contactName textview
+                contactNumber = viewRoot.findViewById(R.id.clientPhoneNumber);
+                contactName = viewRoot.findViewById(R.id.clientName);
+
+                //set contactNumber
+                //contactNumber.setText(phone);
+
+
 
                 // Page view adapter
                 viewPager.setAdapter(new CustomPagerAdapter(this));
@@ -139,8 +152,10 @@ public class PopUpDialogService extends Service {
                 followUpBtn.setOnClickListener(view -> viewPager.setCurrentItem(0));
                 noteBtn.setOnClickListener(view -> viewPager.setCurrentItem(1));
                 reminderBtn.setOnClickListener(view -> viewPager.setCurrentItem(2));
-                taskBtn.setOnClickListener(view -> viewPager.setCurrentItem(3));
-                smsBtn.setOnClickListener(view -> viewPager.setCurrentItem(4));
+                //taskBtn.setOnClickListener(view -> viewPager.setCurrentItem(3));
+                //smsBtn.setOnClickListener(view -> viewPager.setCurrentItem(4));
+
+
 
 
                 //set slide indicator
@@ -225,41 +240,41 @@ public class PopUpDialogService extends Service {
                followUpIndicator.setVisibility(View.VISIBLE);
                noteIndicator.setVisibility(View.INVISIBLE);
                reminderIndicator.setVisibility(View.INVISIBLE);
-               taskIndicator.setVisibility(View.INVISIBLE);
-               smsIndicator.setVisibility(View.INVISIBLE);
+//               taskIndicator.setVisibility(View.INVISIBLE);
+//               smsIndicator.setVisibility(View.INVISIBLE);
                break;
 
            case 1:
                followUpIndicator.setVisibility(View.INVISIBLE);
                noteIndicator.setVisibility(View.VISIBLE);
                reminderIndicator.setVisibility(View.INVISIBLE);
-               taskIndicator.setVisibility(View.INVISIBLE);
-               smsIndicator.setVisibility(View.INVISIBLE);
+//               taskIndicator.setVisibility(View.INVISIBLE);
+//               smsIndicator.setVisibility(View.INVISIBLE);
                break;
 
            case 2:
                followUpIndicator.setVisibility(View.INVISIBLE);
                noteIndicator.setVisibility(View.INVISIBLE);
                reminderIndicator.setVisibility(View.VISIBLE);
-               taskIndicator.setVisibility(View.INVISIBLE);
-               smsIndicator.setVisibility(View.INVISIBLE);
+//               taskIndicator.setVisibility(View.INVISIBLE);
+//               smsIndicator.setVisibility(View.INVISIBLE);
                break;
 
-           case 3:
-               followUpIndicator.setVisibility(View.INVISIBLE);
-               noteIndicator.setVisibility(View.INVISIBLE);
-               reminderIndicator.setVisibility(View.INVISIBLE);
-               taskIndicator.setVisibility(View.VISIBLE);
-               smsIndicator.setVisibility(View.INVISIBLE);
-               break;
-
-           case 4:
-               followUpIndicator.setVisibility(View.INVISIBLE);
-               noteIndicator.setVisibility(View.INVISIBLE);
-               reminderIndicator.setVisibility(View.INVISIBLE);
-               taskIndicator.setVisibility(View.INVISIBLE);
-               smsIndicator.setVisibility(View.VISIBLE);
-               break;
+//           case 3:
+//               followUpIndicator.setVisibility(View.INVISIBLE);
+//               noteIndicator.setVisibility(View.INVISIBLE);
+//               reminderIndicator.setVisibility(View.INVISIBLE);
+//               taskIndicator.setVisibility(View.VISIBLE);
+//               smsIndicator.setVisibility(View.INVISIBLE);
+//               break;
+//
+//           case 4:
+//               followUpIndicator.setVisibility(View.INVISIBLE);
+//               noteIndicator.setVisibility(View.INVISIBLE);
+//               reminderIndicator.setVisibility(View.INVISIBLE);
+//               taskIndicator.setVisibility(View.INVISIBLE);
+//               smsIndicator.setVisibility(View.VISIBLE);
+//               break;
        }
     }
 
